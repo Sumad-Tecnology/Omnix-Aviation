@@ -1,0 +1,353 @@
+@import "tailwindcss";
+/* @import "tw-animate-css"; */
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-brand-sans);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-mono: var(--font-brand-mono);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-destructive: var(--destructive);
+
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+
+  --color-danger: var(--danger);
+  --color-danger-foreground: var(--danger-foreground);
+
+  --color-aviation-blue: var(--aviation-blue);
+  --color-aviation-navy: var(--aviation-navy);
+  --color-aviation-gold: var(--aviation-gold);
+  --color-aviation-silver: var(--aviation-silver);
+  --color-aviation-sky: var(--aviation-sky);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+}
+
+:root {
+  color-scheme: light;
+
+  --radius: 0.75rem;
+
+  /*
+    OMNIX AVIATION BRAND
+    Primary: #001840
+    Neutral Gray: #A8A8A8
+  */
+
+  --background: #ffffff;
+  --foreground: #07111f;
+
+  --card: #ffffff;
+  --card-foreground: #07111f;
+
+  --popover: #ffffff;
+  --popover-foreground: #07111f;
+
+  --primary: #001840;
+  --primary-foreground: #ffffff;
+
+  --secondary: #a8a8a8;
+  --secondary-foreground: #07111f;
+
+  --accent: #d6b35a;
+  --accent-foreground: #001840;
+
+  --muted: #f4f7fb;
+  --muted-foreground: #64748b;
+
+  --destructive: #ef4444;
+
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #0b4ea2;
+
+  --info: #0b4ea2;
+  --info-foreground: #ffffff;
+
+  --success: #10b981;
+  --success-foreground: #ffffff;
+
+  --warning: #f59e0b;
+  --warning-foreground: #001840;
+
+  --danger: #ef4444;
+  --danger-foreground: #ffffff;
+
+  --aviation-navy: #001840;
+  --aviation-blue: #0b4ea2;
+  --aviation-gold: #d6b35a;
+  --aviation-silver: #a8a8a8;
+  --aviation-sky: #eaf4ff;
+
+  --chart-1: #001840;
+  --chart-2: #0b4ea2;
+  --chart-3: #d6b35a;
+  --chart-4: #10b981;
+  --chart-5: #ef4444;
+
+  --sidebar: #ffffff;
+  --sidebar-foreground: #07111f;
+  --sidebar-primary: #001840;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f4f7fb;
+  --sidebar-accent-foreground: #001840;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #0b4ea2;
+
+--font-heading: "Sora", ui-sans-serif, system-ui, sans-serif;
+--font-body: "Manrope", ui-sans-serif, system-ui, sans-serif;
+--font-brand-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+--font-brand-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+.dark {
+  color-scheme: dark;
+
+  --background: #020814;
+  --foreground: #f8fafc;
+
+  --card: #07111f;
+  --card-foreground: #f8fafc;
+
+  --popover: #07111f;
+  --popover-foreground: #f8fafc;
+
+  --primary: #001840;
+  --primary-foreground: #ffffff;
+
+  --secondary: #a8a8a8;
+  --secondary-foreground: #020814;
+
+  --accent: #d6b35a;
+  --accent-foreground: #020814;
+
+  --muted: #0e1a2f;
+  --muted-foreground: #a8a8a8;
+
+  --destructive: #ef4444;
+
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #3b82f6;
+
+  --info: #3b82f6;
+  --info-foreground: #ffffff;
+
+  --success: #10b981;
+  --success-foreground: #ffffff;
+
+  --warning: #f59e0b;
+  --warning-foreground: #020814;
+
+  --danger: #ef4444;
+  --danger-foreground: #ffffff;
+
+  --aviation-navy: #001840;
+  --aviation-blue: #3b82f6;
+  --aviation-gold: #d6b35a;
+  --aviation-silver: #a8a8a8;
+  --aviation-sky: #0e1a2f;
+
+  --chart-1: #3b82f6;
+  --chart-2: #d6b35a;
+  --chart-3: #10b981;
+  --chart-4: #f59e0b;
+  --chart-5: #ef4444;
+
+  --sidebar: #07111f;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #3b82f6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #0e1a2f;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: #1e293b;
+  --sidebar-ring: #3b82f6;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: var(--background);
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    letter-spacing: -0.03em;
+  }
+}
+
+/* Smooth scroll base */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* OMNIX Aviation Grid Background */
+.bg-omnix-grid {
+  background-image:
+    linear-gradient(to right, rgba(0, 24, 64, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 24, 64, 0.07) 1px, transparent 1px);
+  background-size: 80px 80px;
+  background-position: center;
+}
+
+.dark .bg-omnix-grid {
+  background-image:
+    linear-gradient(to right, rgba(168, 168, 168, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(168, 168, 168, 0.08) 1px, transparent 1px);
+}
+
+/* Premium Aviation Gradient */
+.bg-omnix-gradient {
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.25), transparent 35%),
+    linear-gradient(135deg, #001840 0%, #020814 55%, #07111f 100%);
+}
+
+/* Light Aviation Gradient */
+.bg-omnix-soft-gradient {
+  background:
+    radial-gradient(circle at top left, rgba(11, 78, 162, 0.12), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f4f7fb 100%);
+}
+
+/* Glass Card */
+.omnix-glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.dark .omnix-glass {
+  background: rgba(7, 17, 31, 0.7);
+  border: 1px solid rgba(168, 168, 168, 0.16);
+}
+
+/* Text Utilities */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Premium Button Shine */
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transform: skewX(-20deg);
+}
+
+.btn-shine:hover::before {
+  animation: omnix-shine 0.8s ease;
+}
+
+@keyframes omnix-shine {
+  from {
+    left: -80%;
+  }
+  to {
+    left: 130%;
+  }
+}
