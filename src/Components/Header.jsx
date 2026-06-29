@@ -10,19 +10,19 @@ const navLinks = [
   },
   {
     label: "Services",
-    href: "#services",
+    href: "/services",
   },
   {
     label: "About",
-    href: "#about",
+    href: "/about",
   },
   {
     label: "Gallery",
-    href: "#gallery",
+    href: "/gallery",
   },
   {
     label: "Contact",
-    href: "#contact",
+    href: "/contact",
   },
 ];
 
