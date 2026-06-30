@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Mail, MapPin, Phone } from "lucide-react";
 
 import {
@@ -8,6 +9,8 @@ import {
 } from "react-icons/fa";
 
 import logo from "../Assets/OmnixAviation-Logo.png";
+
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzZWimoU4QL7ot5pJascNoNDz_bBa6NZVDEXfRmDvD9HA18O1CNY_mjBP2xRsQnvb4W_g/exec";
 
 const footerColumns = [
   {
@@ -47,6 +50,44 @@ const socialLinks = [
 ];
 
 const Footer = () => {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterStatus, setNewsletterStatus] = useState("");
+  const [isNewsletterLoading, setIsNewsletterLoading] = useState(false);
+
+  const handleNewsletterSubmit = async (event) => {
+    event.preventDefault();
+
+    if (!newsletterEmail.trim()) {
+      setNewsletterStatus("Please enter your email address.");
+      return;
+    }
+
+    setIsNewsletterLoading(true);
+    setNewsletterStatus("");
+
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: newsletterEmail,
+          source: "Website Footer",
+        }),
+      });
+
+      setNewsletterStatus("Thank you. Your email has been saved.");
+      setNewsletterEmail("");
+    } catch (error) {
+      console.error("Newsletter Error:", error);
+      setNewsletterStatus("Something went wrong. Please try again.");
+    } finally {
+      setIsNewsletterLoading(false);
+    }
+  };
+
   return (
     <footer className="w-full bg-primary text-primary-foreground">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
@@ -147,40 +188,65 @@ const Footer = () => {
               </div>
 
               {/* Subscribe */}
-              <form className="flex w-full max-w-md flex-col gap-3 sm:flex-row">
-                <div className="relative flex-1">
-                  <Mail className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-primary-foreground/35" />
-
-                  <input
-                    type="email"
-                    placeholder="Get aviation updates..."
-                    className="h-12 w-full rounded-lg border border-primary-foreground/10 bg-primary-foreground/5 pl-11 pr-4 text-sm font-medium text-primary-foreground outline-none transition placeholder:text-primary-foreground/35 focus:border-accent/50 focus:bg-primary-foreground/10"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="h-12 rounded-lg bg-accent px-6 text-sm font-extrabold text-accent-foreground transition hover:bg-background hover:text-primary"
+              <div className="w-full max-w-md">
+                <form
+                  onSubmit={handleNewsletterSubmit}
+                  className="flex w-full flex-col gap-3 sm:flex-row"
                 >
-                  Subscribe
-                </button>
-              </form>
+                  <div className="relative flex-1">
+                    <Mail className="absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-primary-foreground/35" />
+
+                    <input
+                      type="email"
+                      value={newsletterEmail}
+                      onChange={(event) =>
+                        setNewsletterEmail(event.target.value)
+                      }
+                      placeholder="Get aviation updates..."
+                      required
+                      className="h-12 w-full rounded-lg border border-primary-foreground/10 bg-primary-foreground/5 pl-11 pr-4 text-sm font-medium text-primary-foreground outline-none transition placeholder:text-primary-foreground/35 focus:border-accent/50 focus:bg-primary-foreground/10"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    disabled={isNewsletterLoading}
+                    className="h-12 rounded-lg bg-accent px-6 text-sm font-extrabold text-accent-foreground transition hover:bg-background hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    {isNewsletterLoading ? "Saving..." : "Subscribe"}
+                  </button>
+                </form>
+
+                {newsletterStatus && (
+                  <p className="mt-3 text-sm font-medium text-primary-foreground/70">
+                    {newsletterStatus}
+                  </p>
+                )}
+              </div>
             </div>
           </div>
 
           {/* Bottom */}
           <div className="border-t border-primary-foreground/10 px-2 py-5 sm:px-4">
             <div className="flex flex-col gap-4 text-xs font-medium text-primary-foreground/45 lg:flex-row lg:items-center lg:justify-between">
-              <p>© 2026 OMNIX Aviation. All rights reserved. | Developed by <a href="https://sumadtech.com/" target="_blank" rel="noopener noreferrer" className="transition text-white hover:text-accent">
-                Sumad Technology
-              </a></p>
+              <p>
+                © 2026 OMNIX Aviation. All rights reserved. | Developed by{" "}
+                <a
+                  href="https://sumadtech.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition text-white hover:text-accent"
+                >
+                  Sumad Technology
+                </a>
+              </p>
 
               <div className="flex flex-wrap items-center gap-4">
-                <a href="#" className="transition hover:text-accent">
+                <a href="/privacy" className="transition hover:text-accent">
                   Privacy Policy
                 </a>
                 <span>•</span>
-                <a href="#" className="transition hover:text-accent">
+                <a href="/terms" className="transition hover:text-accent">
                   Terms of Condtion
                 </a>
               </div>

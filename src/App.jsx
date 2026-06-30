@@ -5,6 +5,9 @@ import About from "./Pages/About";
 import Services from "./Pages/Services";
 import Gallery from "./Pages/Gallery";
 import Contact from "./Pages/Contact";
+import AirFreight from "./Pages/ServiceDetails/AirFreight";
+import TermsofContion from "./Pages/TermsofCondtion";
+import PrivacyPolicy from "./Pages/PrivacyPolicy";
 
 function App (){
   return <Routes>
@@ -13,6 +16,10 @@ function App (){
     <Route path="/services" element={<Services/>}/>
     <Route path="/gallery" element={<Gallery/>}/>
     <Route path="/contact" element={<Contact/>}/>
+    <Route path="/airfreight" element={<AirFreight/>}/>
+    <Route path="/terms" element={<TermsofContion/>}/>
+    <Route path="/privacy" element={<PrivacyPolicy/>}/>
+
 
     {/* <Footer /> */}
   </Routes>

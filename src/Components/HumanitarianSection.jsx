@@ -73,7 +73,7 @@ const HumanitarianSection = () => {
           </div>
 
           <div className="mt-10">
-            <Button href="#quote" variant="primary" size="md">
+            <Button href="/contact" variant="primary" size="md">
               Request Emergency Support
             </Button>
           </div>

@@ -66,15 +66,14 @@ const Header = () => {
 
         {/* Desktop Actions */}
         <div className="hidden items-center gap-2 lg:flex">
-          <Button href="#quote" variant="primary" size="sm">
+          <Button href="" variant="primary" size="sm">
             Request Quote
           </Button>
 
           <button
             type="button"
             onClick={handleThemeToggle}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/10 bg-muted text-primary transition hover:bg-primary hover:text-primary-foreground"
-            aria-label="Toggle theme"
+className="flex h-10 w-10 items-center justify-center rounded-full border border-primary/10 bg-muted text-primary transition hover:bg-primary hover:text-primary-foreground dark:border-accent/40 dark:bg-white/10 dark:text-accent dark:hover:bg-accent dark:hover:text-primary"            aria-label="Toggle theme"
           >
             {isDark ? (
               <Sun className="h-4 w-4" />

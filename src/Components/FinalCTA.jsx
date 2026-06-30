@@ -9,12 +9,12 @@ const FinalCTA = ({
   imageAlt = "OMNIX Aviation support",
   primaryButton = {
     label: "Request Aviation Support",
-    href: "#quote",
+    href: "/contact",
   },
-  secondaryButton = {
-    label: "Contact Our Team",
-    href: "#contact",
-  },
+  // secondaryButton = {
+  //   label: "Contact Our Team",
+  //   href: "#contact",
+  // },
   className = "",
 }) => {
   return (
@@ -58,7 +58,7 @@ const FinalCTA = ({
                       </Button>
                     )}
 
-                    {secondaryButton && (
+                    {/* {secondaryButton && (
                       <Button
                         href={secondaryButton.href}
                         variant={secondaryButton.variant || "glass"}
@@ -66,7 +66,7 @@ const FinalCTA = ({
                       >
                         {secondaryButton.label}
                       </Button>
-                    )}
+                    )} */}
                   </div>
                 )}
               </div>
