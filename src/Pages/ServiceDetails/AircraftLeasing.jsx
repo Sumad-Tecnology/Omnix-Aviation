@@ -4,32 +4,32 @@ import ServiceBenefits from "../../Components/ServiceDetail/ServiceBenefits";
 import ServiceProcess from "../../Components/ServiceDetail/ServiceProcess";
 
 function AircraftLeasing() {
-   const relatedServices = [
-    { title: "Air Cargo Operations", href: "/airfreight" },
-    { title: "Passenger Charter", href: "/passenger" },
+  const relatedServices = [
+    { title: "Air Cargo Operations", href: "/services/air-cargo-operations" },
+    { title: "Passenger Charter", href: "/services/passenger-charter-services" },
     {
       title: "Humanitarian Flights",
-      href: "/humanflight",
+      href: "/services/humanitarian-relief-flights",
     },
     {
       title: "Aircraft Leasing",
-      href: "/aircraft",
+      href: "/services/aircraft-leasing-management",
     },
     {
       title: "Flight Support",
-      href: "/flightsupport",
+      href: "/services/flight-operations-support",
     },
     {
       title: "Logistics Coordination",
-      href: "/logistics",
+      href: "/services/logistics-coordination",
     },
     {
       title: "Special Missions",
-      href: "/specialmission",
+      href: "/services/special-mission-operations",
     },
     {
       title: "Aviation Consultancy",
-      href: "/aviationconsultant",
+      href: "/services/aviation-consultancy",
     },
   ];
 
