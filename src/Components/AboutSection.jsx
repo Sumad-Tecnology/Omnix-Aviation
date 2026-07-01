@@ -130,7 +130,6 @@ const AboutSection = () => {
           <div className="absolute bottom-0 left-0 right-0 z-0 h-24 bg-gradient-to-t from-muted to-transparent dark:from-background" />
 
           {/* Small floating dot */}
-          <div className="absolute right-8 top-1/2 hidden h-4 w-4 rounded-full border-2 border-danger bg-card lg:block" />
         </div>
       </div>
     </section>

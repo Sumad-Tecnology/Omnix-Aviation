@@ -72,7 +72,7 @@ const ServiceDetailHero = ({
 
           {/* Right Image */}
           <div className="relative">
-            <div className="overflow-hidden rounded-2xl  bg-white/10 p-3 shadow-2xl shadow-primary/30 backdrop-blur-md">
+            <div className="overflow-hidden rounded-2xl  bg-white/5 p-3 shadow-2xl shadow-primary/30 backdrop-blur-md">
               <div className="overflow-hidden rounded-xl">
                 <img
                   src={image || heroBg}

@@ -2,30 +2,30 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Plane, Route, Settings2 } from "lucide-react";
 
-// import turbopropImg from "../Assets/fleet/turboprop.jpg";
-// import jetImg from "../Assets/fleet/jet.jpg";
-// import acmiImg from "../Assets/fleet/acmi.jpg";
+import turbopropImg from "../Assets/Home/Turbo.webp";
+import jetImg from "../Assets/Home/Jet.webp";
+import acmiImg from "../Assets/Home/ACMI.webp";
 
 const fleetItems = [
   {
     title: "Turboprop Aircraft",
     description:
       "Best for regional operations, remote-area access, short-runway missions, and humanitarian support.",
-    image: "https://i.pinimg.com/736x/94/35/b6/9435b6700601f3b359841a226c8f8351.jpg",
+    image: turbopropImg,
     icon: Route,
   },
   {
     title: "Jet Aircraft",
     description:
       "Best for longer-range passenger, executive, and time-sensitive operations.",
-    image: "https://i.pinimg.com/736x/94/35/b6/9435b6700601f3b359841a226c8f8351.jpg",
+    image: jetImg,
     icon: Plane,
   },
   {
     title: "ACMI / Lease Options",
     description:
       "Best for flexible aircraft availability based on client demand and mission needs.",
-    image: "https://i.pinimg.com/736x/94/35/b6/9435b6700601f3b359841a226c8f8351.jpg",
+    image: acmiImg,
     icon: Settings2,
   },
 ];

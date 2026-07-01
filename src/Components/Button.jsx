@@ -12,25 +12,25 @@ const Button = ({
 
   const variants = {
     primary:
-      "bg-primary text-primary-foreground shadow-lg shadow-primary/20 hover:bg-aviation-blue",
+      "bg-primary text-white shadow-lg shadow-primary/20 hover:bg-aviation-blue dark:bg-accent dark:text-primary dark:shadow-accent/20 dark:hover:bg-white dark:hover:text-primary",
 
     secondary:
-      "bg-background text-primary shadow-lg shadow-foreground/10 hover:bg-accent hover:text-accent-foreground",
+      "bg-white text-primary shadow-lg shadow-black/10 hover:bg-accent hover:text-primary dark:bg-white dark:text-primary dark:hover:bg-accent dark:hover:text-primary",
 
     accent:
-      "bg-accent text-accent-foreground shadow-lg shadow-accent/20 hover:bg-background",
+      "bg-accent text-primary shadow-lg shadow-accent/20 hover:bg-white hover:text-primary dark:bg-accent dark:text-primary dark:hover:bg-white dark:hover:text-primary",
 
     glass:
-      "border border-background/35 bg-background/15 text-background backdrop-blur-md shadow-lg shadow-foreground/10 hover:bg-background/25",
+      "border border-white/35 bg-white/15 text-white backdrop-blur-md shadow-lg shadow-black/10 hover:bg-white/25 dark:border-white/25 dark:bg-white/10 dark:text-white dark:hover:bg-white/20",
 
     outline:
-      "border border-primary/15 bg-transparent text-primary hover:bg-primary hover:text-primary-foreground",
+      "border border-primary/20 bg-transparent text-primary hover:bg-primary hover:text-white dark:border-accent/50 dark:text-accent dark:hover:bg-accent dark:hover:text-primary",
 
     light:
-      "bg-muted text-primary hover:bg-background dark:bg-muted dark:text-foreground dark:hover:bg-card",
+      "bg-muted text-primary hover:bg-white dark:bg-white/10 dark:text-white dark:hover:bg-white/20",
 
     ghost:
-      "bg-transparent text-primary hover:bg-primary/5 dark:text-foreground dark:hover:bg-background/10",
+      "bg-transparent text-primary hover:bg-primary/5 dark:text-accent dark:hover:bg-accent/10",
   };
 
   const sizes = {

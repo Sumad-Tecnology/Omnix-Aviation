@@ -1,16 +1,14 @@
 import { CircleDot } from "lucide-react";
 import Header from "./Header";
 import Button from "./Button";
+import HeroImg from "../Assets/Home/HeroImage.webp"
 
 const HeroSection = () => {
-  const backgroundImageUrl =
-    "https://i.pinimg.com/1200x/b0/c5/42/b0c5428ee8b636610eedcfde06b43446.jpg";
-
   return (
     <section
       className="relative min-h-screen overflow-hidden bg-cover bg-center bg-no-repeat text-white"
       style={{
-        backgroundImage: `url(${backgroundImageUrl})`,
+        backgroundImage: `url(${HeroImg})`,
       }}
     >
       {/* Soft overlay for readability */}

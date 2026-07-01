@@ -38,11 +38,11 @@ const ContactBody = () => {
 
     try {
       await emailjs.sendForm(
-        "service_mk02oti",
-        "template_w3f1sab",
+        "service_2ltfgon",
+        "template_wjjph2k",
         formRef.current,
         {
-          publicKey: "adD7zInb5YDUw5lm4",
+          publicKey: "Q6vJ49DIR-yPwOvu9",
         }
       );
 
@@ -95,7 +95,7 @@ const ContactBody = () => {
                 </span>
                 <div>
                   <p className="text-sm font-semibold text-white">Phone</p>
-                  <p className="mt-1 text-sm text-white/65">+252 XXX XXX XXX</p>
+                  <p className="mt-1 text-sm text-white/65">+252611276128 / +252611276129</p>
                 </div>
               </div>
 
